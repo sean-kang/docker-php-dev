@@ -1,0 +1,15 @@
+FROM php:7.0-fpm
+MAINTAINER Sean Kang <es.guybrush@gmail.com>
+
+RUN apt-get update -y
+RUN apt-get install -y openssh-client git npm libcurl4-gnutls-dev libicu-dev \
+    libmcrypt-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev \
+    libxml2-dev libexpat1-dev libpq-dev libpcre3-dev libtidy-dev libbz2-dev
+RUN docker-php-ext-install mcrypt pdo_pgsql intl gd zip bz2
+RUN curl -L http://static.phpmd.org/php/2.5.0/phpmd.phar > /usr/local/bin/phpmd
+RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.6.2/phpcs.phar > /usr/local/bin/phpcs
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+RUN chmod +x /usr/local/bin/phpmd
+RUN chmod +x /usr/local/bin/phpcs
+RUN chmod +x /usr/local/bin/composer
