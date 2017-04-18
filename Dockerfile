@@ -10,6 +10,9 @@ RUN curl -L http://static.phpmd.org/php/2.5.0/phpmd.phar > /usr/local/bin/phpmd
 RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.6.2/phpcs.phar > /usr/local/bin/phpcs
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
+RUN curl -O https://bootstrap.pypa.io/get-pip.py
+RUN python get-pip.py
+RUN pip install awsebcli
 RUN chmod +x /usr/local/bin/phpmd
 RUN chmod +x /usr/local/bin/phpcs
 RUN chmod +x /usr/local/bin/composer
