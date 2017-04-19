@@ -11,4 +11,5 @@ It offers the following tools.
 * [gulp](http://gulpjs.com/)
 * [PHP Mess Detector](https://phpmd.org)
 * [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+* [PHP Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd)
 * AWS ElasticBeanstalk CLI
