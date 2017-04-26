@@ -14,7 +14,8 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awsebcli
-RUN npm install --global gulp-cli
+RUN npm install --global gulp-cli eslint eslint-plugin-jsx-a11y eslint-plugin-react \
+    stylelint stylelint-config-standard stylelint-scss stylelint-config-sass-guidelines
 RUN chmod +x /usr/local/bin/phpmd
 RUN chmod +x /usr/local/bin/phpcs
 RUN chmod +x /usr/local/bin/phpcpd
