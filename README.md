@@ -1,8 +1,8 @@
 # docker-php-dev
 
-Docker image for PHP 7 Development.
+PHP 7.0 FPM with additional development and deployment tools. You can find the latest image in [Docker Hub](https://hub.docker.com/r/seankang/php-dev).
 
-It offers the following tools.
+This docker image offers the following tools.
 
 * PHP 7 FPM
 * [nodejs 6.x](https://nodejs.org)
