@@ -15,3 +15,5 @@ This docker image offers the following tools.
 * [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 * [PHP Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd)
 * AWS ElasticBeanstalk CLI
+* Chromium
+* xvfb

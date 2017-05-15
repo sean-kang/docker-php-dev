@@ -4,7 +4,8 @@ MAINTAINER Sean Kang <es.guybrush@gmail.com>
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get install -y nodejs openssh-client git libcurl4-gnutls-dev libicu-dev \
     libmcrypt-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev \
-    libxml2-dev libexpat1-dev libpq-dev libpcre3-dev libtidy-dev libbz2-dev
+    libxml2-dev libexpat1-dev libpq-dev libpcre3-dev libtidy-dev libbz2-dev \
+    xvfb chromium
 RUN docker-php-ext-install mcrypt pdo_pgsql intl gd zip bz2
 RUN curl -L http://static.phpmd.org/php/2.5.0/phpmd.phar > /usr/local/bin/phpmd
 RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.6.2/phpcs.phar > /usr/local/bin/phpcs
