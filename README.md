@@ -16,4 +16,4 @@ This docker image offers the following tools.
 * [PHP Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd)
 * AWS ElasticBeanstalk CLI
 * Chromium
-* xvfb
+* [Xvfb](https://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml)
