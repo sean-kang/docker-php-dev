@@ -6,7 +6,7 @@ RUN apt-get install -y nodejs openssh-client git libcurl4-gnutls-dev libicu-dev 
     libmcrypt-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev \
     libxml2-dev libexpat1-dev libpq-dev libpcre3-dev libtidy-dev libbz2-dev \
     xvfb chromium libgconf-2-4 gtk2-engines-pixbuf xfonts-cyrillic xfonts-100dpi \
-    xfonts-75dpi xfonts-scalable x11-apps imagemagick libmagick++-dev
+    xfonts-75dpi xfonts-scalable x11-apps imagemagick libmagick++-dev zip
 RUN pecl install imagick
 RUN docker-php-ext-install mcrypt pdo_pgsql intl gd zip bz2
 RUN docker-php-ext-enable imagick
@@ -15,6 +15,8 @@ RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.6.2
 RUN curl -L https://phar.phpunit.de/phpcpd.phar > /usr/local/bin/phpcpd
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
+RUN curl -O https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
+RUN unzip chromedriver_linux64.zip -d /usr/local/bin/
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awsebcli
