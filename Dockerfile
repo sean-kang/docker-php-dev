@@ -17,6 +17,7 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 RUN curl -O https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
 RUN unzip chromedriver_linux64.zip -d /usr/local/bin/
+RUN rm chromedriver_linux64.zip
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awsebcli
