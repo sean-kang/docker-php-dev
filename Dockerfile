@@ -15,7 +15,7 @@ RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.6.2
 RUN curl -L https://phar.phpunit.de/phpcpd.phar > /usr/local/bin/phpcpd
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-RUN curl -O https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
+RUN curl -O https://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip
 RUN unzip chromedriver_linux64.zip -d /usr/local/bin/
 RUN rm chromedriver_linux64.zip
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
