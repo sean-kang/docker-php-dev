@@ -1,11 +1,13 @@
 FROM php:7.0-fpm
 MAINTAINER Sean Kang <es.guybrush@gmail.com>
 
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list
+RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get install -y nodejs openssh-client git libcurl4-gnutls-dev libicu-dev \
     libmcrypt-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev \
     libxml2-dev libexpat1-dev libpq-dev libpcre3-dev libtidy-dev libbz2-dev \
-    xvfb chromium libgconf-2-4 gtk2-engines-pixbuf xfonts-cyrillic xfonts-100dpi \
+    xvfb google-chrome-stable libgconf-2-4 gtk2-engines-pixbuf xfonts-cyrillic xfonts-100dpi \
     xfonts-75dpi xfonts-scalable x11-apps imagemagick libmagick++-dev zip
 RUN pecl install imagick
 RUN docker-php-ext-install mcrypt pdo_pgsql intl gd zip bz2
